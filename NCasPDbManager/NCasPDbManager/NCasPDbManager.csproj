@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{27DEBE40-157C-4733-AC66-65662B9C375C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NCasPDbManager</RootNamespace>
+    <AssemblyName>NCasPDbManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\ICO_DB매니저.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NCasAppCommon, Version=1.3.5998.40016, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\4.공유폴더\Dropbox\공유폴더\NCAS\NCAS_200_NCAS_DLLs\NCasAppCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="NCASBIZ, Version=1.0.5997.18827, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\4.공유폴더\Dropbox\공유폴더\NCAS\NCAS_200_NCAS_DLLs\NCASBIZ.dll</HintPath>
+    </Reference>
+    <Reference Include="NCASFND">
+      <HintPath>..\..\..\..\..\..\4.공유폴더\Dropbox\공유폴더\NCAS\NCAS_200_NCAS_DLLs\NCASFND.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <HintPath>..\..\..\..\..\..\..\4.공유폴더\Dropbox\공유폴더\NCAS\NCAS_900_Outputs\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContainers\BroadRespResultData.cs" />
+    <Compile Include="DataContainers\AlarmRespResultData.cs" />
+    <Compile Include="BasicDataMng.cs" />
+    <Compile Include="ConfigContainers\ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigContainers\ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigContainers\ConfigMng.cs" />
+    <Compile Include="ConfigContainers\ConfigViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigContainers\ConfigViewBase.Designer.cs">
+      <DependentUpon>ConfigViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigContainers\DbConfigView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigContainers\DbConfigView.Designer.cs">
+      <DependentUpon>DbConfigView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbManagerBiz.cs" />
+    <Compile Include="ErrTermInfoData.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigContainers\NCasDmSerializableConfig.cs" />
+    <Compile Include="DataContainers\MasterInfoData.cs" />
+    <Compile Include="NCasPDbManagerRsc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NCasPDbManagerRsc.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PDbManagerDefine.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ConfigContainers\TcpConfigView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigContainers\TcpConfigView.Designer.cs">
+      <DependentUpon>TcpConfigView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigContainers\UdpConfigView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigContainers\UdpConfigView.Designer.cs">
+      <DependentUpon>UdpConfigView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueryMng.cs" />
+    <Compile Include="DataContainers\TcData.cs" />
+    <Compile Include="TcOverlapCheckMng.cs" />
+    <EmbeddedResource Include="ConfigContainers\ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigContainers\ConfigViewBase.resx">
+      <DependentUpon>ConfigViewBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigContainers\DbConfigView.resx">
+      <DependentUpon>DbConfigView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigContainers\TcpConfigView.resx">
+      <DependentUpon>TcpConfigView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigContainers\UdpConfigView.resx">
+      <DependentUpon>UdpConfigView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NCasPDbManagerRsc.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NCasPDbManagerRsc.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popIconSetting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICO_DB매니저.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu00Title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgTxtDbMngTcp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgTxtDbMngUdp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnMenuNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnMenuSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnPrintNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnPrintPress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSaveNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSavePress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footerBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconFooter1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconFooter2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popTabBarRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popTabNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popTabSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgSubBarCom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popBgTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listIconError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listIconOk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgSettingInfoTbl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

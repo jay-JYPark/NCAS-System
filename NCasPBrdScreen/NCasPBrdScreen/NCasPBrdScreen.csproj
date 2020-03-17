@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67D4EF84-0949-4746-8D11-345A9F5BEA37}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NCasPBrdScreen</RootNamespace>
+    <AssemblyName>NCasPBrdScreen</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\ICO_PBroad.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NCasAppCommon, Version=1.2.5778.21196, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Dropbox\공유폴더\NCAS\NCAS_200_NCAS_DLLs\NCasAppCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="NCASBIZ, Version=1.0.5893.26969, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Dropbox\공유폴더\NCAS\NCAS_200_NCAS_DLLs\NCASBIZ.dll</HintPath>
+    </Reference>
+    <Reference Include="NCASFND, Version=1.0.5577.31974, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Dropbox\공유폴더\NCAS\NCAS_200_NCAS_DLLs\NCASFND.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NCasPBrdScreenRsc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NCasPBrdScreenRsc.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PBrdScreenBiz.cs" />
+    <Compile Include="PBrdScreenUIController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PcbBizDataClass\CasMonBizData.cs" />
+    <Compile Include="PcbBizDataClass\KeyBizData.cs" />
+    <Compile Include="PcbBizDataClass\OrderBizData.cs" />
+    <Compile Include="PcbBizDataClass\RecordBizData.cs" />
+    <Compile Include="PcbBizDataClass\TtsStopBizData.cs" />
+    <Compile Include="PcbDataMng\BroadContent.cs" />
+    <Compile Include="PcbDataMng\BroadContentContainer.cs" />
+    <Compile Include="PcbDataMng\BroadContentMng.cs" />
+    <Compile Include="PcbDataMng\BroadText.cs" />
+    <Compile Include="PcbDataMng\DeviceStatusData.cs" />
+    <Compile Include="PcbDataMng\DeviceStatusDataContainer.cs" />
+    <Compile Include="PcbDataMng\DeviceStatusMng.cs" />
+    <Compile Include="PcbDataMng\KeyDataContainer.cs" />
+    <Compile Include="PcbDataMng\KeyDataMng.cs" />
+    <Compile Include="PcbDataMng\PasswordMng.cs" />
+    <Compile Include="PcbDataMng\TVCaptionContainer.cs" />
+    <Compile Include="PcbDataMng\TVCaptionContent.cs" />
+    <Compile Include="PcbDataMng\TVCaptionData.cs" />
+    <Compile Include="PcbDataMng\TVCaptionContentMng.cs" />
+    <Compile Include="PcbViewForms\BroadTextView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PcbViewForms\BroadTextView.Designer.cs">
+      <DependentUpon>BroadTextView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PcbViewForms\CoverView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PcbViewForms\CoverView.Designer.cs">
+      <DependentUpon>CoverView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PcbViewForms\DeviceMonitorView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PcbViewForms\DeviceMonitorView.Designer.cs">
+      <DependentUpon>DeviceMonitorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PcbViewForms\OrderConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PcbViewForms\OrderConfirmForm.Designer.cs">
+      <DependentUpon>OrderConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PcbViewForms\OrderSirenViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PcbViewForms\OrderSirenViewForm.Designer.cs">
+      <DependentUpon>OrderSirenViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PcbViewForms\OrderView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PcbViewForms\OrderView.Designer.cs">
+      <DependentUpon>OrderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PcbViewForms\OrderView19201080.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PcbViewForms\OrderView19201080.Designer.cs">
+      <DependentUpon>OrderView19201080.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PcbViewForms\ResultView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PcbViewForms\ResultView.Designer.cs">
+      <DependentUpon>ResultView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PcbViewForms\ViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PcbViewForms\ViewBase.Designer.cs">
+      <DependentUpon>ViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NCasPBrdScreenRsc.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NCasPBrdScreenRsc.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PcbViewForms\BroadTextView.resx">
+      <DependentUpon>BroadTextView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PcbViewForms\CoverView.resx">
+      <DependentUpon>CoverView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PcbViewForms\DeviceMonitorView.resx">
+      <DependentUpon>DeviceMonitorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PcbViewForms\OrderConfirmForm.resx">
+      <DependentUpon>OrderConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PcbViewForms\OrderSirenViewForm.resx">
+      <DependentUpon>OrderSirenViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PcbViewForms\OrderView.resx">
+      <DependentUpon>OrderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PcbViewForms\OrderView19201080.resx">
+      <DependentUpon>OrderView19201080.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PcbViewForms\ResultView.resx">
+      <DependentUpon>ResultView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PcbViewForms\ViewBase.resx">
+      <DependentUpon>ViewBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1686.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1670.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1671.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1672.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1673.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1674.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1675.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1676.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1677.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1678.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1680.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1681.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1682.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1683.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1684.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1685.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertIcon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertIcon4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertIcon5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertIcon6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertIcon7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barLoading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgCountGroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgLoading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgtxtGroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footerBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footerLeftBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footerLeftBgBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footerRightBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guideAlert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICO_PBroad.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu00Title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu02Normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popIconKey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popTxtIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topMenu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topMenu1On.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topMenu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topMenu2On.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topMenu3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topMenu3On.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topMenu4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topMenu4On.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSirenNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSirenPress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgMenu3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgMenu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgMainUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertPupple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertPink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconStateRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconStateGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn003Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn003Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn002Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn002Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn001Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn001Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgMain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listIconOk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listIconError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popBgTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSmallPress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSmallNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnBroadGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSavePress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSaveNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgBrdTxtGroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnBroadNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnBroadSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainBgBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgMainDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1679.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
